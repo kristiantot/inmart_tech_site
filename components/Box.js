@@ -9,13 +9,12 @@ export default function Box(props) {
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
-  useFrame(() => {
+  useFrame((state) => {
     mesh.current.position.lerp(
-      new THREE.Vector3(props.position[0], props.position[1], props.endPos),
+      new THREE.Vector3(props.endPos[0], props.endPos[1], props.endPos[2]),
       0.05
     );
-    if(hovered)
-    {
+    if (hovered) {
       mesh.current.position.z += 0.15;
     }
   });

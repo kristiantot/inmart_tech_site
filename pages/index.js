@@ -13,30 +13,39 @@ export default function IndexPage() {
       </Head>
 
       <main className={styles.main}>
-        <div style={{ position: "absolute"}}>
-        <h1 className={styles.title}>Inmart Tech</h1>
+        <div style={{ position: "absolute" }}>
+          <h1 className={styles.title}>Inmart Tech</h1>
 
-        <p className={styles.description}>We build awesome Web & Mobile Apps</p>
+          <p className={styles.description}>
+            We build awesome Web & Mobile Apps
+          </p>
         </div>
         <div className={styles.threejs}>
           <Canvas camera={{ position: [-5, 0, 45] }}>
             <ambientLight intensity={1} />
-            <pointLight position={[-10, 5, 55]} intensity={2} />
-            <Box logo="react.png" position={[10, 0, 50]} endPos={9} />
-            <Box logo="next.png" position={[-10, 0, 40]} endPos={13} />
-            <Box logo="js.png" position={[0, 10, 35]} endPos={11} />
-            <Box logo="aws.png" position={[0, -10, 25]} endPos={10}></Box>
+            <pointLight position={[-65, 5, 55]} intensity={2} />
+            <Box logo="react.png" position={[80, 0, 50]} endPos={[10, 0, 9]} />
+            <Box
+              logo="next.png"
+              position={[-70, 0, 40]}
+              endPos={[-10, 0, 13]}
+            />
+            <Box logo="js.png" position={[60, 10, 35]} endPos={[0, 10, 11]} />
+            <Box
+              logo="aws.png"
+              position={[-95, -10, 25]}
+              endPos={[0, -10, 10]}
+            ></Box>
             <OrbitControls
-              minAzimuthAngle={-0.8}
-              maxAzimuthAngle={0.8}
-              minPolarAngle={1}
-              maxPolarAngle={2}
+              minAzimuthAngle={-0.6}
+              maxAzimuthAngle={0.6}
+              minPolarAngle={1.2}
+              maxPolarAngle={1.8}
               enableZoom={false}
             />
           </Canvas>
         </div>
       </main>
-      
     </>
   );
 }
